@@ -32,7 +32,9 @@
 
 (defcustom company-manually-restore t
   "If non-nil, save candidates to `company-manually-file' when close Emacs.
-Then the candidates will be restored after Emacs is reopened.")
+Then the candidates will be restored after Emacs is reopened."
+  :group 'company-manually
+  :type 'boolean)
 
 (defcustom company-manually-file
   (concat user-emacs-directory ".company-manually.el")
