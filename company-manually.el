@@ -53,8 +53,9 @@ Then the candidates will be restored after Emacs is reopened."
   (interactive "r")
   (let ((candidate (buffer-substring-no-properties (mark) (point))))
     (company-manually-add-candidate candidate))
-  (when (featurep 'evil)
-    (evil-exit-visual-state)))
+  (if (featurep 'evil)
+      (evil-exit-visual-state)
+    (keyboard-quit)))
 
 (defun company-manually-delete-candidate (candidate)
   "Delete CANDIDATE from `company-manually--candidates'."
