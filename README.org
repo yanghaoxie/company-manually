@@ -1,13 +1,14 @@
 #+AUTHOR: Yanghao Xie
 * company-manually
 ** Introduction
-   This package let you build your own candidate list which is used
-   for [[https://github.com/company-mode/company-mode][company-mode]]. For example, when writing =Tex= document, I can
-   use command =company-manually-add-candidate-at-point= or
+   This package let you build your own candidate list manually
+   (therefore =company-manually=), which is used for [[https://github.com/company-mode/company-mode][company-mode]]. For
+   example, when writing =Tex= document, I can use command
+   =company-manually-add-candidate-at-point= or
    =company-manually-add-candidate-ivy= to manually add =x_{a}= and
    =x_{b}= to =company-manually--candidates=.  Then if I insert =x=,
-   company backend =company-manually= will display =x_{a}= and =x_{b}= as
-   candidates to let me choose among them.
+   company backend =company-manually= will display =x_{a}= and =x_{b}=
+   as candidates to let me choose among them.
 ** Table of Contents                                                  :TOC_3:
 - [[#company-manually][company-manually]]
   - [[#introduction][Introduction]]
