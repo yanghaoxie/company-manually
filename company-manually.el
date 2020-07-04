@@ -38,7 +38,7 @@ Then the candidates will be restored after Emacs is reopened."
 
 (defcustom company-manually-file
   (concat user-emacs-directory ".company-manually.el")
-  "Default file for saving/loading company-manually candidates."
+  "Default file for saving/loading `company-manually--candidates'."
   :group 'company-manually
   :type 'file)
 
