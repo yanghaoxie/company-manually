@@ -4,9 +4,9 @@
    This package let you build your own candidate list which is used
    for [[https://github.com/company-mode/company-mode][company-mode]]. For example, when writing =Tex= document, I can
    use command =company-manually-add-candidate-at-point= or
-   =company-manually-add-candidate-ivy= to manually add x_{a} and
-   x_{b} to =company-manually--candidates=.  Then if I insert =x=,
-   company backend =company-manually= will display x_{a} and x_{b} as
+   =company-manually-add-candidate-ivy= to manually add =x_{a}= and
+   =x_{b}= to =company-manually--candidates=.  Then if I insert =x=,
+   company backend =company-manually= will display =x_{a}= and =x_{b}= as
    candidates to let me choose among them.
 ** Table of Contents                                                  :TOC_3:
 - [[#company-manually][company-manually]]
@@ -27,7 +27,7 @@
 *** Tips
     You would better set =company-minimum-prefix-length= to 1, if you
     are using [[https://github.com/cdominik/cdlatex][cdlatex]] and the prefixes of some of you candidates
-    consist of one letter and =_= or =^=, for example x_{a}.
+    consist of one letter and =_= or =^=, for example =x_{a}=.
     
     The season is that by default if you enable =cdlatex=, when you
     enter =_= or =^=, =cdlatex= will automatically add ={}=. This
