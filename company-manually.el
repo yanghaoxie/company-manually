@@ -89,7 +89,7 @@ Otherwise, if point is not inside a symbol, return an empty string."
 
 (defun company-manually-dump (varlist buffer)
   "Insert into BUFFER the setq statement to recreate the variables in VARLIST."
-  (loop for var in varlist do
+  (cl-loop for var in varlist do
         (print (list 'setq var (list 'quote (symbol-value var)))
                buffer)))
 
