@@ -1,0 +1,48 @@
+#+AUTHOR: Yanghao Xie
+* company-manually
+** Introduction
+   This package let you build your own candidate list which is used
+   for [[https://github.com/company-mode/company-mode][company-mode]]. For example, when writing $\LaTeX$ document, I
+   can use command =company-manually-add-candidate-at-point= or
+   =company-manually-add-candidate-ivy= to manually add $x_{a}$ and
+   $x_{b}$ to =company-manually--candidates=.  Then if I insert =x=,
+   company backend =company-manually= will display $x_{a}$ and $x_{b}$
+   as candidates to let me choose among them.
+** Table of Contents                                                  :TOC_3:
+- [[#company-manually][company-manually]]
+  - [[#introduction][Introduction]]
+  - [[#install][Install]]
+    - [[#use-package][Use package]]
+  - [[#usage][Usage]]
+    - [[#tips][Tips]]
+  - [[#customization][Customization]]
+
+** Install
+*** Use package
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (use-package
+    :load-path "path/to/company-manually.el")
+#+END_SRC
+** Usage
+*** Tips
+    You would better set =company-minimum-prefix-length= to 1, if you
+    are using [[https://github.com/cdominik/cdlatex][cdlatex]] and the prefixes of some of you candidates
+    consist of one letter and =_= or =^=, for example $x_{a}$.
+    
+    The season is that by default if you enable =cdlatex=, when you
+    enter =_= or =^=, =cdlatex= will automatically add ={}=. This
+    feature will get rid of candidates which have similar prefix as we
+    pointed out previously. In order to bypass this, we =advice=
+    =cdlatex-sub-superscript= so if =company tooltip= or =company
+    posframe= are visible, cdlatex will not insert ={}=. In addition,
+    =company tooltip= or =company posframe= will only display if
+    number of inserted letters is bigger than
+    =company-minimum-prefix-length= and there are
+    candidates. Therefore, setting =company-minimum-prefix-length= is
+    preferable.
+** Customization
+   - =company-manually-restore=: whether save and restore the
+     candidates (default =t=).
+   - =company-manually-file=: default file for saving/loading
+     company-manually candidates (default =(concat
+     user-emacs-directory ".company-manually.el")=).
