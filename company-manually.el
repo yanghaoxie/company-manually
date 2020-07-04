@@ -55,7 +55,7 @@ Then the candidates will be restored after Emacs is reopened."
     (company-manually-add-candidate candidate))
   (if (featurep 'evil)
       (evil-exit-visual-state)
-    (keyboard-quit)))
+    (deactivate-mark)))
 
 (defun company-manually-delete-candidate (candidate)
   "Delete CANDIDATE from `company-manually--candidates'."
