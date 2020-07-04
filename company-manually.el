@@ -121,12 +121,12 @@ Otherwise, if point is not inside a symbol, return an empty string."
 
 (defun company-manually-company-posframe-visible-p (buffer-or-name)
   "Return whether company posframe buffer called BUFFER-OR-NAME is visible.."
-  (dolist (frame (frame-list))
+  (cl-dolist (frame (frame-list))
     (let ((buffer-info (frame-parameter frame 'posframe-buffer)))
       (when (or (equal buffer-or-name (car buffer-info))
                 (equal buffer-or-name (cdr buffer-info)))
 	(when (frame-visible-p frame)
-	  (return t))))))
+	  (cl-return t))))))
 
 (defun company-manually-cdlatex-sub-superscript ()
   "Insert ^ or _ if company tooltip or company posframe are visible.
