@@ -24,7 +24,7 @@
 
 ;;; Commentary:
 
-;; Manually build the candidates for the backend.
+;; Manually build the candidates for company backend.
 
 ;;; Code:
 (require 'cl-lib)
