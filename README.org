@@ -15,6 +15,9 @@
     - [[#use-package][Use package]]
   - [[#usage][Usage]]
     - [[#tips][Tips]]
+    - [[#add-candidate][add candidate]]
+    - [[#delete-candidate][delete candidate]]
+    - [[#cleanup-candidates][cleanup candidates]]
   - [[#customization][Customization]]
 
 ** Install
@@ -40,6 +43,19 @@
     =company-minimum-prefix-length= and there are
     candidates. Therefore, setting =company-minimum-prefix-length= is
     preferable.
+*** add candidate
+    - =company-manually-add-candidate-at-point=: first mark the region
+      you would like to be candidate, then execute this command.
+    - =company-manually-add-candidate-ivy=: execute this command, then
+      input the candidate.
+*** delete candidate
+    - =company-manually-delete-candidate-at-point=: first mark the
+      region you would like to be deleted from candidates, then
+      execute this command.
+    - =company-manually-add-candidate-ivy=: execute this command, then
+      input the candidate you would like to delete.
+*** cleanup candidates
+    - =company-manually-cleanup-candidates=: cleanup all candidates.
 ** Customization
    - =company-manually-restore=: whether save and restore the
      candidates (default =t=).
