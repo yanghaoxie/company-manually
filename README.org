@@ -41,8 +41,8 @@
     =company tooltip= or =company posframe= will only display if
     number of inserted letters is bigger than
     =company-minimum-prefix-length= and there are
-    candidates. Therefore, setting =company-minimum-prefix-length= is
-    preferable.
+    candidates. Therefore, setting =company-minimum-prefix-length= to
+    1 is preferable.
 *** add candidates
     - =company-manually-add-candidate-at-point=: first mark the region
       you would like to be candidate, then execute this command.
