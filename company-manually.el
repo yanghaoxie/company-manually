@@ -6,7 +6,7 @@
 ;; Maintainer: Yanghao Xie <yhaoxie@gmail.com>
 ;; URL: https://github.com/yanghaoxie/company-manually
 ;; Version: 0.1.0
-;; Keywords: company-mode, manually build candidates
+;; Keywords: convenience, company-mode, manually build candidates
 ;; Package-Requires: ((emacs "24.3") (company "0.9.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
