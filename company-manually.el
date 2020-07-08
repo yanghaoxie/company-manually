@@ -49,6 +49,8 @@ Then the candidates will be restored after Emacs is reopened."
   "Add CANDIDATE to `company-manually--candidates'."
   (add-to-list 'company-manually--candidates candidate))
 
+(declare-function evil-exit-visual-state "evil-states")
+
 (defun company-manually-add-candidate-at-point (start end)
   "Add candidate formed from START to END as a candidate to the candidates."
   (interactive "r")
@@ -129,6 +131,10 @@ Otherwise, if point is not inside a symbol, return an empty string."
 	(when (frame-visible-p frame)
 	  (return t))))))
 
+(declare-function cdlatex-number-of-backslashes-is-odd "cdlatex")
+(declare-function cdlatex-ensure-math "cdlatex")
+(declare-function texmathp "texmathp")
+
 (defun company-manually-cdlatex-sub-superscript ()
   "Insert ^ or _ if company tooltip or company posframe are visible.
 Insert ^{} or _{} unless the number of backslashes before point is odd.
@@ -156,6 +162,9 @@ dollars.  When pressed twice, make the sub/superscript roman."
 
 (when (featurep 'cdlatex)
   (advice-add 'cdlatex-sub-superscript :override #'company-manually-cdlatex-sub-superscript))
+
+(declare-function ivy-read "ivy")
+(declare-function ivy-thing-at-point "ivy")
 
 (defun company-manually-delete-candidate-ivy ()
   "Delete candidate from `company-manually--candidates' using ivy."
