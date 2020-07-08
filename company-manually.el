@@ -7,7 +7,7 @@
 ;; URL: https://github.com/yanghaoxie/company-manually
 ;; Version: 0.1.0
 ;; Keywords: convenience, company-mode, manually build candidates
-;; Package-Requires: ((emacs "24.3") (company "0.9.0"))
+;; Package-Requires: ((emacs "24.3") (company "0.9.0") (ivy "0.13.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -29,6 +29,7 @@
 ;;; Code:
 (require 'cl-lib)
 (require 'company)
+(require 'ivy)
 
 (defcustom company-manually-restore t
   "If non-nil, save candidates to `company-manually-file' when close Emacs.
