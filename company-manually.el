@@ -51,9 +51,9 @@ Then the candidates will be restored after Emacs is reopened."
 
 (declare-function evil-exit-visual-state "evil-states")
 
-(defun company-manually-add-candidate-at-point (start end)
+(defun company-manually-add-candidate-at-point ()
   "Add candidate formed from START to END as a candidate to the candidates."
-  (interactive "r")
+  (interactive)
   (let ((candidate (buffer-substring-no-properties (mark) (point))))
     (company-manually-add-candidate candidate))
   (if (featurep 'evil)
@@ -65,9 +65,9 @@ Then the candidates will be restored after Emacs is reopened."
   (setq company-manually--candidates
 	  (delete candidate company-manually--candidates)))
 
-(defun company-manually-delete-candidate-at-point (start end)
+(defun company-manually-delete-candidate-at-point ()
   "Delete candidate formed from START to END candidate from `company-manually--candidates'."
-  (interactive "r")
+  (interactive)
   (let ((candidate (buffer-substring-no-properties (mark) (point))))
     (company-manually-delete-candidate candidate)))
 
