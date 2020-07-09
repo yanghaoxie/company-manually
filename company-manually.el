@@ -121,7 +121,7 @@ Otherwise, if point is not inside a symbol, return an empty string."
 
 (when company-manually-restore
   (add-hook 'kill-emacs-hook #'company-manually-dump-candidates)
-  (load company-manually-file))
+  (add-hook 'after-init-hook #'company-manually-restore-candidates))
 
 (defun company-manually-company-posframe-visible-p (buffer-or-name)
   "Return whether company posframe buffer called BUFFER-OR-NAME is visible.."
