@@ -135,6 +135,10 @@ Otherwise, if point is not inside a symbol, return an empty string."
 (declare-function cdlatex-ensure-math "cdlatex")
 (declare-function texmathp "texmathp")
 
+(defvar cdlatex-make-sub-superscript-roman-if-pressed-twice)
+(defvar cdlatex-sub-super-scripts-outside-math-mode)
+(defvar company-posframe-buffer)
+
 (defun company-manually-cdlatex-sub-superscript ()
   "Insert ^ or _ if company tooltip or company posframe are visible.
 Insert ^{} or _{} unless the number of backslashes before point is odd.
