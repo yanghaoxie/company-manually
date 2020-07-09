@@ -116,7 +116,8 @@ Otherwise, if point is not inside a symbol, return an empty string."
 
 (defun company-manually-restore-candidates ()
   "Restore candidates from file."
-  (load company-manually-file))
+  (if (file-exists-p company-manually-file)
+      (load company-manually-file)))
 
 (when company-manually-restore
   (add-hook 'kill-emacs-hook #'company-manually-dump-candidates)
