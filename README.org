@@ -1,6 +1,6 @@
 #+AUTHOR: Yanghao Xie
 * company-manually
-  [[https://melpa.org/#/company-manually][file:https://melpa.org/packages/company-manually-badge.svg]] [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPLv3-blue.svg]]
+  [[https://melpa.org/#/company-manually][file:https://melpa.org/packages/company-manually-badge.svg]] [[https://stable.melpa.org/#/company-manually][file:https://stable.melpa.org/packages/company-manually-badge.svg]] [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPLv3-blue.svg]]
 ** Introduction
    This package let you build your own candidate list manually
    (therefore =company-manually=), which is used for [[https://github.com/company-mode/company-mode][company-mode]]. For
